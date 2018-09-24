@@ -1,4 +1,14 @@
+<h1>
+  This is my second page
+</h1>
 <p>
-  Welcome to your account
+  Dear {{currentUser.username}}! Welcome to your account
 </p>
-<a href="/">Signout</a>
+<p>
+  Date of birth: {{currentUser.dob}}
+</p>
+<p>
+  Age: {{currentUser.age}}
+</p>
+
+<a href (click)="logout()">Signout</a>
