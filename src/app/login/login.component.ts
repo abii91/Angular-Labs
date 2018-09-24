@@ -22,10 +22,16 @@ export class LoginComponent implements OnInit {
 
   logIn(pages) {
     if(pages.username === "test" && pages.password === "123"){
+      var user = {
+        id: 1,
+        username: pages.username,
+        dob: "20-07-1990",
+        age: 28
+      }
+      localStorage.setItem("user", JSON.stringify(user));
       this.router.navigate(['/account']);
     }
     else{
-      console.log("asdasd");
       this.errorMessage = "The username or password is wrong.";
     }
   }
